@@ -1,0 +1,110 @@
+:root {
+    --body-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line-clr: hsl(215, 32%, 27%);
+
+    --white: hsl(0, 0%, 100%);
+
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100dvh;
+    font-family: "Outfit", sans-serif;
+    background-color: var(--body-bg);
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: clamp(1.125rem, 1.107rem + 0.089vw, 1.188rem);
+}
+
+hr {
+    border: 1px solid var(--line-clr);
+
+}
+
+.soft-blue {
+    color: var(--soft-blue);
+}
+
+.card {
+    width: 85%;
+    max-width: 350px;
+    margin-inline: auto;
+    padding: 1em;
+    background-color: var(--card-bg);
+    border-radius: 1em;
+    box-shadow: 0px 20px 15px 12px rgb(0, 0, 0, 0.1);
+}
+
+.card__img {
+    border-radius: 0.7em;
+    overflow: hidden;
+    margin-block-end: 1em;
+}
+
+.card__heading {
+    color: var(--white);
+    font-size: clamp(1.5rem, 1.414rem + 0.429vw, 1.8rem);
+    font-weight: 600;
+    margin-block-end: 1em;
+}
+
+.card__desc {
+    margin-block-end: 1em;
+    font-weight: 300;
+}
+
+.card__value {
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: 1em;
+}
+
+.card__price,
+.card__duration {
+    display: flex;
+    align-items: center;
+    gap: .4em;
+}
+
+.card__price {
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.card__profile {
+    margin: 1.2em 0;
+    display: flex;
+    align-items: center; 
+    gap: .8em;
+}
+
+.profile__img {
+    width: 12%;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.profile__detail {
+    color: var(--white);
+    font-weight: 300;
+}
